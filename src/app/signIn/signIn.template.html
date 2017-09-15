@@ -1,0 +1,20 @@
+<div class="sign-in-container valign-wrapper">
+	<div class="container form-container z-depth-3">
+		    <form class="row form-fields">
+		      <h4>Sign In</h4>
+		      <div class="input-field col s12">
+		        <i class="material-icons prefix">email</i>
+		        <input id="icon_email" type="text" class="validate" name="email" [(ngModel)]="email">
+		        <label for="icon_email">Email</label>
+		      </div>
+		      <div class="input-field col s12">
+		        <i class="material-icons prefix">lock</i>
+		        <input id="icon_lock" type="password" class="validate" name="password" [(ngModel)]="password">
+		        <label for="icon_lock">Password</label>
+		      </div>
+		      <button class="btn waves-effect waves-light right submit-button" type="submit" name="action" (click)="signIn()">Submit
+		        <i class="material-icons right">send</i>
+		      </button>
+		    </form>
+	</div>
+</div>

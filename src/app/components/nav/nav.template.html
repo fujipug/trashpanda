@@ -1,0 +1,22 @@
+<!-- Dropdown Structure -->
+<ul id="services-dropdown" class="dropdown-content">
+  <li [routerLink] = "['/studentServices']"><a>For Students</a></li>
+  <li [routerLink] = "['/propertyManagementServices']"><a>For Property Managers</a></li>
+</ul>
+
+<nav class="" role="navigation">
+  <div class="nav-wrapper container">
+    <a id="logo-container" href="#" class="brand-logo">Trash Panda</a> 
+    <ul class="right hide-on-med-and-down">
+      <li><a class="dropdown-button" id="services-dropdown-button" href="#!" data-activates="services-dropdown">Services<i class="material-icons right">arrow_drop_down</i></a></li>
+      <li><a href="#">Contact Us</a></li>
+    </ul>
+
+    <ul id="nav-mobile" class="side-nav">
+      <li><a class="dropdown-button" id="services-dropdown-button" href="#!" data-activates="services-dropdown">Services<i class="material-icons right">arrow_drop_down</i></a></li>
+      <li><a href="#">Contact Us</a></li>
+      <li><a href="#">Pricing</a></li>
+    </ul>
+    <a href="#" data-activates="nav-mobile" class="button-collapse"><i class="material-icons">menu</i></a>
+  </div>
+</nav>
