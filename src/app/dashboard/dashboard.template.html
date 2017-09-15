@@ -1,36 +1,58 @@
-<ul id="slide-out" class="side-nav">
-   <li><div class="user-view">
-     <div class="background">
-       <img src="images/office.jpg">
-     </div>
-     <a href="#!user"><img class="circle" src="images/yuna.jpg"></a>
-     <a href="#!name"><span class="white-text name">John Doe</span></a>
-     <a href="#!email"><span class="white-text email">jdandturk@gmail.com</span></a>
-   </div></li>
-   <li><a href="#!"><i class="material-icons">cloud</i>First Link With Icon</a></li>
-   <li><a href="#!">Second Link</a></li>
-   <li><div class="divider"></div></li>
-   <li><a class="subheader">Subheader</a></li>
-   <li><a class="waves-effect" href="#!">Third Link With Waves</a></li>
- </ul>
- <a href="#" data-activates="slide-out" class="button-collapse"><i class="material-icons">menu</i></a>
-
-<nav>
-  <div class="nav-wrapper">
-    <a href="#" class="brand-logo right">Logo</a>
-    <ul id="nav-mobile" class="left hide-on-med-and-down">
-      <li><a href="sass.html">Sass</a></li>
-      <li><a href="badges.html">Components</a></li>
-      <li><a href="collapsible.html">JavaScript</a></li>
-    </ul>
-  </div>
-</nav>
-
 <div class="dashboard">
-	<div class="container center">
-		<img class="circle user-image" [src]=user?.image>
-		<h5>{{user?.first}} {{user?.last}}</h5>
-		<h6>{{user?.email}}</h6>
+	<div class="container">
+		<div class="row">
+			<div class="col s6">
+				<div class="card light-green darken-1">
+				  <div class="card-content white-text">
+				  	<div class="center">
+				  		<img class="circle user-image" [src]=user?.image>
+				    	<span class="card-title">{{user.first}} {{user.last}}</span>
+				    </div>
+				    <ul class="collection">
+				      <li class="collection-item"><div>Edit Info<a href="#!" class="secondary-content"><i class="material-icons">send</i></a></div></li>
+				      <li class="collection-item"><div>Change Settings<a href="#!" class="secondary-content"><i class="material-icons">send</i></a></div></li>
+				      <li class="collection-item"><div>Request Time-Off<a href="#!" class="secondary-content"><i class="material-icons">send</i></a></div></li>
+				      <li class="collection-item"><div>Request-Work<a href="#!" class="secondary-content"><i class="material-icons">send</i></a></div></li>
+				    </ul>
+				  </div>
+				</div>
+			</div>
+			<div class="col s6">
+				<div class="card">
+				  <div class="card-content">
+				    <span class="card-title">Work Schedule</span>
+				    <ul class="collection">
+				      <li class="collection-item">
+				        <!-- <i class="material-icons circle">event</i> -->
+				        <span class="title"><b>Monday Sept. 3</b></span>
+				        <p>The Suites<br>
+				           Luna Chug
+				        </p>
+				        <!-- <a href="#!" class="secondary-content"><i class="material-icons">grade</i></a> -->
+				      </li>
+				      <li class="collection-item">
+				        <!-- <i class="material-icons circle">event</i> -->
+				        <span class="title"><b>Wednesday Sept. 5</b></span>
+				        <p>The Suites<br>
+				           Luna Chug
+				        </p>
+				        <!-- <a href="#!" class="secondary-content"><i class="material-icons">grade</i></a> -->
+				      </li>
+				      <li class="collection-item">
+				        <!-- <i class="material-icons circle">event</i> -->
+				        <span class="title"><b>Friday Sept. 7</b></span>
+				        <p>The Suites<br>
+				           Luna Chug
+				        </p>
+				        <!-- <a href="#!" class="secondary-content"><i class="material-icons">grade</i></a> -->
+				      </li>
+				    </ul>
+				    <span class="right">See More</span>      
+				  </div>
+				</div>
+			</div>
+		</div>
+
 	</div>
 </div>
 

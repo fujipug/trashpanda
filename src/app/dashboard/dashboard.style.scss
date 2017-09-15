@@ -6,4 +6,18 @@
 		height: 15rem;
 		width: 15rem;
 	}
+
+	.collection {
+		border: none;
+		margin: 0;
+
+		.collection-item {
+			background: transparent;
+			padding-left: 0;
+		}
+
+		a {
+			color: white;
+		}
+	}
 }

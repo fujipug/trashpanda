@@ -18,11 +18,7 @@ import { AppState } from './app.service';
   styleUrls: [
     './app.component.css'
   ],
-  template: `
-    <main>
-      <router-outlet></router-outlet>
-    </main>
-  `
+  templateUrl: "./app.template.html"
 })
 export class AppComponent implements OnInit {
   public angularclassLogo = 'assets/img/trash_panda_logo.png';
