@@ -10,6 +10,8 @@ export const ROUTES: Routes = [
   // { path: 'home',  component: HomeComponent },
   // { path: 'about', component: AboutComponent },
   { path: 'splash', loadChildren: './splash/splash.module#SplashModule' },
+  { path: 'contactUs', loadChildren: './contactUs/contactUs.module#ContactUsModule' },
+  { path: 'analytics', loadChildren: './analytics/analytics.module#AnalyticsModule' },
   { path: 'signIn', loadChildren: './signIn/signIn.module#SignInModule' },
   { path: 'dashboard', loadChildren: './dashboard/dashboard.module#DashboardModule' },
   { path: 'studentServices', loadChildren: './studentServices/studentServices.module#StudentServicesModule' },

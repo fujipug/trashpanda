@@ -8,6 +8,8 @@ import {
 } from '@angular/core';
 import { AppState } from './app.service';
 
+declare var firebase: any;
+
 /**
  * App Component
  * Top Level Component
@@ -24,6 +26,7 @@ export class AppComponent implements OnInit {
   public angularclassLogo = 'assets/img/trash_panda_logo.png';
   public name = 'Trash Panda';
   public url = 'https://gettrashpanda.com';
+  isSignedIn: boolean;
 
   constructor(
     public appState: AppState
@@ -31,6 +34,16 @@ export class AppComponent implements OnInit {
 
   public ngOnInit() {
     console.log('Initial App State', this.appState.state);
+
+    var user = firebase.auth().currentUser;
+
+    if (user) {
+      // User is signed in.
+      this.isSignedIn = true;
+    } else {
+      // No user is signed in.
+      this.isSignedIn = false;
+    }
   }
 
 }

@@ -1,5 +1,5 @@
 <main>
-  <tp-nav></tp-nav>
+  <tp-nav *ngIf="!isSignedIn"></tp-nav>
   <router-outlet></router-outlet>
 </main>
  

@@ -30,6 +30,8 @@ import { HomeComponent } from './home';
 import { AboutComponent } from './about';
 
 import { SplashModule } from './splash';
+import { ContactUsModule } from './contactUs';
+import { AnalyticsModule } from './analytics';
 import { DashboardModule } from './dashboard';
 import { SignInModule } from './signIn';
 import { StudentServicesModule } from './studentServices';
@@ -78,6 +80,8 @@ type StoreType = {
     SignInModule,
     DashboardModule,
     NavModule,
+    ContactUsModule,
+    AnalyticsModule,
     StudentServicesModule,
     PropertyManagementServicesModule,
     RouterModule.forRoot(ROUTES, {
