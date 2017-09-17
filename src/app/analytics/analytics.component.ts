@@ -12,6 +12,11 @@ export class AnalyticsComponent implements OnInit {
 
   public localState: any;
 
+  // Doughnut
+  public doughnutChartLabels:string[] = ['Download Sales', 'In-Store Sales', 'Mail-Order Sales'];
+  public doughnutChartData:number[] = [350, 450, 100];
+  public doughnutChartType:string = 'doughnut';
+
   constructor(public route: ActivatedRoute) {}
 
   public ngOnInit() {
@@ -28,6 +33,15 @@ export class AnalyticsComponent implements OnInit {
           stopPropagation: false // Stops event propagation
         }
       );
+  }
+
+  // events
+  public chartClicked(e:any):void {
+    console.log(e);
+  }
+  
+  public chartHovered(e:any):void {
+    console.log(e);
   }
 
 }

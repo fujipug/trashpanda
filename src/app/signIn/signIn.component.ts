@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { ActivatedRoute } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
 
 declare var jQuery: any;
 declare var firebase: any;
@@ -16,7 +16,7 @@ export class SignInComponent implements OnInit {
   email: string;
   password: string;
 
-  constructor(public route: ActivatedRoute) {}
+  constructor(public route: ActivatedRoute, public router: Router) {}
 
   public ngOnInit() {
 
@@ -25,6 +25,7 @@ export class SignInComponent implements OnInit {
   signIn() {
     firebase.auth().signInWithEmailAndPassword(this.email, this.password).then(() => {
       Materialize.toast('Welcome Back', 3000, 'green');
+      this.router.navigate(['/dashboard']);
     }).catch((error) => {
       Materialize.toast(error, 3000, 'red');
     });

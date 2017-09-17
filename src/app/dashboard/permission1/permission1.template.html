@@ -1,0 +1,67 @@
+<div class="row">
+	<div class="col s12 m6">
+		<div class="card light-green darken-1">
+		  <div class="card-content white-text">
+		  	<div class="center">
+		  		<img class="circle user-image" [src]=user?.image>
+		    	<span class="card-title">{{user?.first}} {{user?.last}}</span>
+		    </div>
+		    <ul class="collection">
+		      <li class="collection-item"><div>Edit Info<a href="#!" class="secondary-content"><i class="material-icons">send</i></a></div></li>
+		      <li class="collection-item"><div>Change Settings<a href="#!" class="secondary-content"><i class="material-icons">send</i></a></div></li>
+		      <li class="collection-item"><div>Request Time-Off<a href="#!" class="secondary-content"><i class="material-icons">send</i></a></div></li>
+		      <!-- <li class="collection-item"><div>Request-Work<a href="#!" class="secondary-content"><i class="material-icons">send</i></a></div></li> -->
+		      <li class="collection-item" (click)="logout()"><div><b>Logout</b><a href="#!" class="secondary-content"><i class="material-icons">directions_walk</i></a></div></li>
+		    </ul>
+		  </div>
+		</div>
+	</div>
+	<div class="col s12 m6">
+		<div class="card">
+		  <div class="card-content">
+		    <span class="card-title">Work Schedule</span>
+		    <ul class="collection">
+		      <li class="collection-item">
+		        <!-- <i class="material-icons circle">event</i> -->
+		        <span class="title"><b>Monday Sept. 3</b></span>
+		        <p>The Suites<br>
+		           Luna Chug
+		        </p>
+		        <!-- <a href="#!" class="secondary-content"><i class="material-icons">grade</i></a> -->
+		      </li>
+		      <li class="collection-item">
+		        <!-- <i class="material-icons circle">event</i> -->
+		        <span class="title"><b>Wednesday Sept. 5</b></span>
+		        <p>The Suites<br>
+		           Luna Chug
+		        </p>
+		        <!-- <a href="#!" class="secondary-content"><i class="material-icons">grade</i></a> -->
+		      </li>
+		      <li class="collection-item">
+		        <!-- <i class="material-icons circle">event</i> -->
+		        <span class="title"><b>Friday Sept. 7</b></span>
+		        <p>The Suites<br>
+		           Luna Chug
+		        </p>
+		        <!-- <a href="#!" class="secondary-content"><i class="material-icons">grade</i></a> -->
+		      </li>
+		    </ul>
+		    <span class="right">See More</span>      
+		  </div>
+		</div>
+
+		<div class="card blue-grey darken-1">
+		  <div class="card-content white-text">
+		  	<span class="card-title">Current Manager</span>
+	    	<div class="row">
+	    		<img class="circle manager-image" src="https://scontent-sjc2-1.xx.fbcdn.net/v/t31.0-8/15799866_713270365494062_4622377971591212728_o.jpg?oh=80140a86b497b28ce9bf96b997e8f5e4&oe=5A5B9D35">
+	      		<span class="">Luna Chug</span>
+	      	</div>
+		    <ul class="collection">
+		      <li class="collection-item"><div>Send Message<a href="#!" class="secondary-content"><i class="material-icons">send</i></a></div></li>
+		    </ul>
+		  </div>
+
+		</div>
+	</div>
+</div>

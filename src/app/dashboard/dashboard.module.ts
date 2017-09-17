@@ -3,6 +3,7 @@ import { FormsModule } from '@angular/forms';
 import { NgModule } from '@angular/core';
 import { RouterModule } from '@angular/router';
 import { DashboardComponent } from './dashboard.component';
+import { Permission1Module } from './permission1/permission1.module';
 // import { NavModule } from '../components/nav/nav.module';
 
 export const routes = [
@@ -16,6 +17,7 @@ export const routes = [
   imports: [
     CommonModule,
     FormsModule,
+    Permission1Module,
     // NavModule,
     RouterModule.forChild(routes),
   ],

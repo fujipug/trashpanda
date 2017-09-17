@@ -1,0 +1,39 @@
+
+<div class="container">
+	<div class="row">
+	  <!-- <h3>Analytics</h3> -->
+	  <div class="col s12 m6">
+	    <div class="card">
+	      <div class="card-content">
+	        <span class="card-title">September Analytics</span>
+	        <div style="display: block">
+	          <canvas baseChart
+	                      [data]="doughnutChartData"
+	                      [labels]="doughnutChartLabels"
+	                      [chartType]="doughnutChartType"
+	                      (chartHover)="chartHovered($event)"
+	                      (chartClick)="chartClicked($event)"></canvas>
+	        </div>
+	      </div>
+
+	    </div>
+	  </div>
+
+	  <div class="col s12 m6">
+	    <div class="card">
+	      <div class="card-content">
+	        <span class="card-title">August Analytics</span>
+	        <div style="display: block">
+	          <canvas baseChart
+	                      [data]="doughnutChartData"
+	                      [labels]="doughnutChartLabels"
+	                      [chartType]="doughnutChartType"
+	                      (chartHover)="chartHovered($event)"
+	                      (chartClick)="chartClicked($event)"></canvas>
+	        </div>
+	      </div>
+
+	    </div>
+	  </div>
+	</div>
+</div>

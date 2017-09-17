@@ -1,8 +1,9 @@
 import { Component, OnInit } from '@angular/core';
-import { ActivatedRoute } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
 
 declare var jQuery: any;
 declare var firebase: any;
+declare var Materialize: any;
 
 @Component({
   selector: 'tp-dashboard',
@@ -13,10 +14,15 @@ export class DashboardComponent implements OnInit {
 
   public localState: any;
   user: any;
+  date: any;
 
-  constructor(public route: ActivatedRoute) {}
+  constructor(public route: ActivatedRoute, public router: Router) {}
 
   public ngOnInit() {
+    // Get Current Date
+    this.date = new Date();
+
+
     jQuery('.button-collapse').sideNav({
         menuWidth: 300, // Default is 300
         edge: 'left', // Choose the horizontal origin
@@ -26,16 +32,50 @@ export class DashboardComponent implements OnInit {
         onClose: function(el) { }, // A function to be called when sideNav is closed
       });
 
-    var ref = firebase.database().ref("Users/FYadTl9JYFRBDTVnvX0I6RyuOIG2");
+    //TODO: Seperate into service to get User info
+    var user = firebase.auth().currentUser;
+    if (user) {
+      // User is signed in.
+      var ref = firebase.database().ref("Users/" + user.uid);
+      return ref.once("value")
+      .then((snapshot) => {
+        // this.user = snapshot.val();
+        console.log("Hello");
+        this.getNetworkInfo(snapshot.val().default, user.uid);
+        // return Promise.resolve(event);
+      }).catch(() => {
+        // return Promise.resolve(this.getBadEvent(eventKey));
+      });
+
+      
+    } else {
+      // No user is signed in.
+
+    }     
+  }
+
+  getNetworkInfo(network, user) {
+    var ref = firebase.database().ref("Networks/" + network + "/Users/" + user);
     return ref.once("value")
     .then((snapshot) => {
-      console.log(snapshot.val());
       this.user = snapshot.val();
-      return Promise.resolve(event);
+      console.log(this.user);
+      // return Promise.resolve(event);
     }).catch(() => {
       // return Promise.resolve(this.getBadEvent(eventKey));
     });
-          
+  }
+
+  logout() {
+    firebase.auth().signOut().then(() => {
+      // Sign-out successful.
+      Materialize.toast('Signed Out', 3000);
+      this.router.navigate(['/splash']);
+     
+    }).catch((error) => {
+      // An error happened.
+      Materialize.toast('There was an error', 3000, 'red');
+    });
   }
 
 }

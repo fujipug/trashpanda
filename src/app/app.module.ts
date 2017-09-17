@@ -40,6 +40,9 @@ import { NoContentComponent } from './no-content';
 import { XLargeDirective } from './home/x-large';
 
 import { NavModule } from './components/nav/nav.module';
+import { Permission1Module } from './dashboard/permission1/permission1.module';
+
+import { ChartsModule } from 'ng2-charts';
 
 import '../styles/styles.scss';
 import '../styles/headings.css';
@@ -76,12 +79,14 @@ type StoreType = {
     BrowserAnimationsModule,
     FormsModule,
     HttpModule,
+    ChartsModule,
     SplashModule,
     SignInModule,
     DashboardModule,
     NavModule,
     ContactUsModule,
     AnalyticsModule,
+    Permission1Module,
     StudentServicesModule,
     PropertyManagementServicesModule,
     RouterModule.forRoot(ROUTES, {
